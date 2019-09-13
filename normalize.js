@@ -118,7 +118,7 @@ const toArrayFn = (accumulator, [key, model]) => {
 
 const normalize = (data, name = 'model') => {
 
-  if (!data) throw new Error('entity not found! Check normalize input')
+  if (!data) throw new Error('entity not found! Check normalize-api input')
 
   if (!Array.isArray(data)) {
     const disassembledModels = disassembleModel({ ...data }, name)
