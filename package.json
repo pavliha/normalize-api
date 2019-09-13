@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "api normalization utility",
   "main": "normalize.js",
+  "homepage": "https://github.com/pavliha/normalize-api#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

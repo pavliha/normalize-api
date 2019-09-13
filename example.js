@@ -1,14 +1,4 @@
-# normalize-api
-
-This function pulls out models from nested object.
-And removes model nesing alltogether.
-Makes data easy to store in redux store
-
-### Single object
-
-```javascript
 import normalize from 'normalize-api'
-
 
 const post = {
   id: 1,
@@ -54,13 +44,6 @@ models = {
   ]
 }
 */
-
-```
-
-### Array of objects
-
-```javascript
-import normalize from 'normalize-api'
 
 const posts = [
   {
@@ -137,5 +120,3 @@ models = {
   ]
 }
  */
-
-```
