@@ -3,28 +3,6 @@ import isArray from 'lodash/isArray'
 import omit from 'lodash/omit'
 import merge from 'lodash/merge'
 
-/**
- *
- * @param entries
- * @param accumulator
- *
- * @example [
- { lesson: [{ id: 1, title: 'lesson 1' }] },
- { lesson: [{ id: 2, title: 'lesson 2' }] },
- { location: [{ id: 1, title: 'location 1' }], }
- ]
- *
- * @returns {*}
- *
- * @example {
-    lesson: [
-      { id: 1, title: 'lesson 1' },
-      { id: 2, title: 'lesson 2' }
-    ],
-    location: [{ id: 1, title: 'location 1' }]
-  }
- */
-
 const mergeEntries = (entries, accumulator) =>
   entries.reduce((accumulator, value) => {
     return Object.entries(accumulator).reduce((acc, [key, value]) => ({
@@ -66,7 +44,7 @@ const extractArrayLike = (model) => {
 }
 
 const addIdsFromNestedModelsFn = (models, [key, value]) => {
-  const id = value?.id || value?._id
+  const id = value && (value.id || value._id)
   if (id) return ({ ...omit(models, key), [key + '_id']: id })
   if (isArray(value)) return omit(models, key)
   return { ...models, [key]: value }
