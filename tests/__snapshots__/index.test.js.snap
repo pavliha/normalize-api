@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`normalize normalizes entities  with nested objects 1`] = `
+Object {
+  "post": Array [
+    Object {
+      "id": 1,
+      "title": "My first post",
+      "user_id": 4,
+    },
+  ],
+  "user": Array [
+    Object {
+      "id": 4,
+      "name": "Post Writer",
+    },
+  ],
+}
+`;
+
+exports[`normalize normalizes entities arrays of objects 1`] = `
+Object {
+  "comments": Array [
+    Object {
+      "id": 1,
+      "message": "First comment",
+      "post_id": 1,
+    },
+    Object {
+      "id": 2,
+      "message": "Second comment",
+      "post_id": 1,
+    },
+    Object {
+      "id": 3,
+      "message": "Third comment",
+      "post_id": 1,
+    },
+  ],
+  "post": Array [
+    Object {
+      "id": 1,
+    },
+  ],
+}
+`;
+
+exports[`normalize normalizes entities arrays of objects and nested objects inside of array of objects 1`] = `
+Object {
+  "comments": Array [
+    Object {
+      "id": 1,
+      "message": "First comment",
+      "post_id": 1,
+      "user_id": 1,
+    },
+    Object {
+      "id": 2,
+      "message": "Second comment",
+      "post_id": 1,
+      "user_id": 2,
+    },
+    Object {
+      "id": 3,
+      "message": "Third comment",
+      "post_id": 1,
+      "user_id": 2,
+    },
+  ],
+  "post": Array [
+    Object {
+      "id": 1,
+    },
+  ],
+  "user": Array [
+    Object {
+      "id": 1,
+      "name": "User 1",
+    },
+    Object {
+      "id": 2,
+      "name": "User 2",
+    },
+  ],
+}
+`;
