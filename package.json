@@ -1,12 +1,13 @@
 {
   "name": "normalize-api",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "api normalization utility",
   "main": "dist/index.js",
   "homepage": "https://github.com/pavliha/normalize-api#readme",
   "scripts": {
     "build": "webpack",
-    "test": "echo \\\"Error: no tests specified\\\" && exit 1"
+    "test": "jest",
+    "test:inspect": "node --inspect-brk node_modules/.bin/jest"
   },
   "keywords": [
     "normalize"
@@ -14,11 +15,24 @@
   "author": "Pavel Kostyuk",
   "license": "ISC",
   "dependencies": {
+    "jest": "^24.9.0",
     "lodash": "4.17.15"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-async-generator-functions": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-export-default-from": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-env": "^7.7.5",
+    "@babel/preset-react": "^7.7.4",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "react-test-renderer": "^16.12.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
