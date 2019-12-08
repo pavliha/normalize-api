@@ -10,7 +10,7 @@ describe('normalize', () => {
       user: { id: 4, name: 'Post Writer' },
     }
 
-    const entities = normalize({ post })
+    const entities = normalize(post, 'post')
     expect(entities).toMatchSnapshot()
   })
 
@@ -37,7 +37,7 @@ describe('normalize', () => {
       ]
     }
 
-    const entities = normalize({ post })
+    const entities = normalize(post, 'post')
     expect(entities).toMatchSnapshot()
   })
 
@@ -67,7 +67,7 @@ describe('normalize', () => {
       ]
     }
 
-    const entities = normalize({ post })
+    const entities = normalize(post, 'post')
     expect(entities).toMatchSnapshot()
   })
 })

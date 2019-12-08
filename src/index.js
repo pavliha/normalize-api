@@ -16,7 +16,6 @@ const normalize = (name, data) => {
 
 }
 
-export default (entry) => {
-  const result = Object.entries(entry).map(([key, value]) => normalize(key, value))
-  return result[0]
+export default (entry, name) => {
+  return normalize(name, entry)
 }
