@@ -36,7 +36,7 @@ const post = {
   ]
 }
 
-const models = normalize({ post })
+const models = normalize(post, 'post')
 
 /* response of normalize
 models = {
