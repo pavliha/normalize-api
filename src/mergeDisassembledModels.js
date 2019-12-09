@@ -1,3 +1,4 @@
+import omit from 'lodash/omit'
 
 const mergeEntries = (entries, accumulator) =>
   entries.reduce((accumulator, value) => {
